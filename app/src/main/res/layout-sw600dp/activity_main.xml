@@ -1,43 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="1sp"
+    android:paddingBottom="1sp"
+    android:paddingLeft="1sp"
+    android:paddingRight="1sp"
+
     android:background="@drawable/presentacion"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/LinerId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp">
     <TextView
-        android:id="@+id/TextView"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/texto"
-        android:layout_gravity="center_horizontal"
         android:textColor="#FFFFFF"
+        android:textSize="65sp"
         android:textStyle="bold"
-        android:textSize="30dp" />
-</LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/LinerId">
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/LinerId"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="50dp"
-            android:text="@string/button"
-            android:background="@drawable/btn_border"/>
-    </LinearLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="104dp"
+        android:layout_height="58dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="145dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginRight="144dp"
+        android:background="@drawable/btn_border"
+        android:text="@string/button"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.352" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
